@@ -20,3 +20,43 @@
 8) <a href="https://github.com/DhayalAarthi/CompetitiveProgramming/blob/Hackerrank/Hackerrank/C/HelloWorld/Solution8.c">Solution8.c</a> - scanf different format input
 9) <a href="https://github.com/DhayalAarthi/CompetitiveProgramming/blob/Hackerrank/Hackerrank/C/HelloWorld/Solution9.c">Solution9.c</a> - printf using character by character
 10) <a href="https://github.com/DhayalAarthi/CompetitiveProgramming/blob/Hackerrank/Hackerrank/C/HelloWorld/Solution10.c">Solution10.c</a> - using fgets
+
+## 1) Solution.c - Normal solution
+
+```c
+char s[100];
+scanf("%[^\n]%*c", &s);
+printf("Hello, World!\n"); 
+printf("%s", s);
+```
+<b>Explanation:</b> 
+
+```char s[100];```
+
+* Declaration for the character array size 100, assuming input length won't exceed more than 100 characters which is not specified in the requirement.
+* char is a keyword refering to character which allocated single byte of memory (8 bits) which is to store ACSII reference value
+
+```scanf("%[^\n]%*c", &s);```
+
+* scanf is library function in c programming
+* scanf function reads the input from stdin
+* first parameter we can pass as "format" which is pointer to the null terminator
+* % matches literal 
+* [] set - matching non empty characters
+* \n - new line escape sequence
+* %[^\n] - Will search till it reaches new line
+* "%[^\n]%*c" - Will search till the new line repeatedly and read a character
+* &s - Store in address of "s" variable 
+
+```printf("Hello, World!\n");```
+
+* printf is library function in c programming
+* printf function writes the output to stdout
+* first parameter which we are passing is *format
+* prints "Hello, World!" and new line 
+
+```printf("%s", s);```
+
+* % - Introductory character in format which will look for the next parameter in the code.
+* In format we are spefifying %s which will look for string or array of characters, here we refering as s. 
+* When we pass s, it will pass first character address and prints till it reaches '\0' which we call as null. 
