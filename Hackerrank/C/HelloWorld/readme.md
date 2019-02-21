@@ -40,12 +40,12 @@ printf("%s", s);
 
 * scanf is library function in c programming
 * scanf function reads the input from stdin
-* first parameter we can pass as "format" which is pointer to the null terminator
-* % matches literal 
+* first parameter we can pass is "format" which is pointer to the null terminator
+* % - matches literal 
 * [] set - matching non empty characters
 * \n - new line escape sequence
-* %[^\n] - Will search till it reaches new line
-* "%[^\n]%*c" - Will search till the new line repeatedly and read a character
+* %[^\n] - Will search till it reaches "new line"
+* "%[^\n]%*c" - Will search till the "new line" repeatedly and read a character
 * &s - Store in address of "s" variable 
 
 ```printf("Hello, World!\n");```
