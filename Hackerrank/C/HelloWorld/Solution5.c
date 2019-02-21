@@ -1,7 +1,8 @@
+/**
+ * Author: dhayalaarthi.com
+ * Email: dhayalram.k@gmail.com
+**/
 #include <stdio.h>
-#include <string.h>
-#include <math.h>
-#include <stdlib.h>
 
 int main() {
 	
