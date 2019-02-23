@@ -17,6 +17,6 @@ int main() {
     if(n > 9){
         n = 0;
     }
-    printf(numbers[n]);
+    puts(numbers[n]);
     return 0;
 }
