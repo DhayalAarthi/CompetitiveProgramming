@@ -13,6 +13,9 @@
 
 <b>Difficulty:</b> Easy
 
+<b>Assumptions</b> 
+* The input n should be greater or equals to 1 and lesser than or equals to 10 power 9
+
 <b>Solutions</b>
 
 1) <a href="https://github.com/DhayalAarthi/CompetitiveProgramming/blob/master/Hackerrank/C/ConditionalStatementsInC/Solution.c" target="_blank">Solution.c</a> - Simple solution using if, else if, else and printf
@@ -31,6 +34,7 @@
 14) <a href="https://github.com/DhayalAarthi/CompetitiveProgramming/blob/master/Hackerrank/C/ConditionalStatementsInC/Solution14.c" target="_blank">Solution14.c</a> - Soluion using string array and while loop
 15) <a href="https://github.com/DhayalAarthi/CompetitiveProgramming/blob/master/Hackerrank/C/ConditionalStatementsInC/Solution15.c" target="_blank">Solution15.c</a> - Solution using enum, string array and switch case
 
+---
 ## 1) Solution.c - Simple solution using if, else if, else and printf.
 
 <b>Code</b>
@@ -50,6 +54,8 @@
     else                printf("Greater than 9");
 ```
 
+---
+
 ## 2) Solution2.c - Solution using array of string with printf
 
 <b>Code</b>
@@ -67,6 +73,7 @@
     }
     printf(numbers[n]);
 ```
+---
 
 ## 3) Solution3.c - Simple solution using if, else if, else and puts
 
@@ -87,6 +94,7 @@
     else if (n == 9)    puts("nine");
     else                puts("Greater than 9");
 ```
+---
 
 ## 4) Solution4.c - Solution using array of string with puts
 
@@ -105,6 +113,7 @@
     }
     puts(numbers[n]);
 ```
+---
 
 ## Solution5.c - Solution using switch case and printf
 
@@ -127,6 +136,7 @@
         default: printf("Greater than 9");
     }
 ```
+---
 
 ## Solution6.c - Solution using switch case and puts
 
@@ -149,6 +159,7 @@
         default: puts("Greater than 9");
     }
 ```
+---
 
 ## Solution7.c - Solution using switch case, using tempravary variable and printf
 
@@ -172,6 +183,7 @@
 
     printf(result);
 ```
+---
 
 ## Solution8.c - Solution using switch case, using tempravary variable and puts
 
@@ -195,6 +207,7 @@
 
     puts(result);
 ```
+---
 
 ## Solution9.c - Solution using if statement and printf alone
 
@@ -215,6 +228,7 @@
     if (n == 9) printf("nine");
     if (n > 9)  printf("Greater than 9");
 ```
+---
 
 ## Solution10.c - Solution using if statement and puts alone
 
@@ -235,6 +249,7 @@
     if (n == 9) puts("nine");
     if (n > 9)  puts("Greater than 9");
 ```
+---
 
 ## Solution11.c - Solution using string array and for loop
 
@@ -255,6 +270,7 @@
         printf("Greater than 9");
     }
 ```
+---
 
 ## Solution12.c - Solution using printf and multi ternary operator
 
@@ -276,6 +292,7 @@
         "Greater than 9"
     );
 ```
+---
 
 ## Solution13.c - Solution using string array and printf
 
@@ -291,6 +308,7 @@
   puts(numbers[n < 10 ? n : 0]);
   return 0;
 ```
+---
 
 ## Solution14.c - Soluion using string array and while loop
 
@@ -313,6 +331,7 @@
         printf("Greater than 9");
     }
 ```
+---
 
 ## Solution15.c - Solution using enum, string array and switch case
 
@@ -339,3 +358,4 @@
         default : printf(numS[0]);
     }
 ```
+---
