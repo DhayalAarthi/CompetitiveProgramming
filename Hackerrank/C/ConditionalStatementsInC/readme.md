@@ -14,7 +14,7 @@
 <b>Difficulty:</b> Easy
 
 <b>Assumptions</b> 
-* The input n should be greater or equals to 1 and lesser than or equals to 10 power 9
+* The input n should be greater or equals to 1 and lesser than or equals to 10 power of 9
 
 <b>Solutions</b>
 
@@ -53,6 +53,46 @@
     else if (n == 9)    printf("nine");
     else                printf("Greater than 9");
 ```
+
+<b>Explanation</b>
+
+1. ```int n;```  Declaring variable n and allocating memory as integer, which is specific to the compilers few compilers allocated 4 bytes and recent compilers allocating 8 bytes. As we didn't mentioned anything before the int, it takes as ```unsigned int a;``` which can store negative value also as value.
+
+2. ```scanf("%d",&n);``` scanf is the functio allows program to get input from standard in which is generally from keyboard. As developer specified ```%d``` it reads input as int and store in the location of n which specified as ```&n```.
+
+3. ```if (n == 1) printf("one");``` If is a conditional check statement, it knows only true(1) or false(0). Inside ``` n == 1 ``` is the condition, which returns true/false based on the value of n. When the value returns true it will go inside the execution. Here execution is ```printf("one");``` Which prints the output. When the condition is true, it will skip the upcoming "else if" and "else" statement. 
+
+4. ```else if (n == 2) printf("two");``` "else if" is the condition which comes after "if" or some other "else if". When the previous condition fails, then it will come to this statment. Works same like if statement. "else if" is the optional condition and can't declare without giving "if" condition.
+
+5. ```else printf("Greater than 9");``` "else" is the condition which comes after "if" or "else if". When all the previous condition fails then it will execute. "else" is optional condition and can't declate without giving "if" condition
+
+6. Program checks ```if (n == 1)```. When the given value is 1, then prints the output as "one" and skips else if and else conditions in execution.
+
+7. When point no. 6 fails then it will check ```else if (n == 2)```, When the given value is 2, then prints the output as "two" and skips else if and else conditions in execution.
+
+8. When point no. 7 fails then it will check ```else if (n == 3)```, When the given value is 3, then prints the output as "three" and skips else if and else conditions in execution.
+
+9. When point no. 8 fails then it will check ```else if (n == 4)```, When the given value is 4, then prints the output as "four" and skips else if and else conditions in execution.
+
+10. When point no. 9 fails then it will check ```else if (n == 5)```, When the given value is 5, then prints the output as "five" and skips else if and else conditions in execution.
+
+11. When point no. 10 fails then it will check ```else if (n == 6)```, When the given value is 6, then prints the output as "six" and skips else if and else conditions in execution.
+
+12. When point no. 11 fails then it will check ```else if (n == 7)```, When the given value is 7, then prints the output as "seven" and skips else if and else conditions in execution.
+
+13. When point no. 12 fails then it will check ```else if (n == 8)```, When the given value is 8, then prints the output as "eight" and skips else if and else conditions in execution.
+
+14. When point no. 13 fails then it will check ```else if (n == 9)```, When the given value is 9, then prints the output as "nine" and skips else if and else conditions in execution.
+
+15. When point no. 14 fails then it will execute ```else```, It will reach here when all the above conditions failed, then prints the output as "Greater than 9".
+
+<b>More points from Dhayal</b>
+
+1. Giving ``` { } ``` for ```if, else if, ```  and ```else``` is the good practice. It will make the developers and editor to understand better way. For single line statement we don't need to specifically mention ```{ }```. 
+
+2. When the given ```n``` is more than 9, then it is suppose to go inside the condition of ```if``` and 8 ```else if``` which takes "CPU" cost to execute the program. So this code is not very efficient in process wise.
+
+3. Having multiple ```printf``` statment will confuse the developers.
 
 ---
 
