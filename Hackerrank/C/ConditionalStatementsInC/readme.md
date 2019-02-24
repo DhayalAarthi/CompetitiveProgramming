@@ -56,7 +56,7 @@
 
 <b>Explanation</b>
 
-1. ```int n;```  Declaring variable n and allocating memory as integer, which is specific to the compilers few compilers allocated 4 bytes and recent compilers allocating 8 bytes. As we didn't mentioned anything before the int, it takes as ```unsigned int a;``` which can store negative value also as value.
+1. ```int n;```  Declaring variable "n" and allocating memory as integer, which is specific to the compilers few compilers allocated 4 bytes and recent compilers allocating 8 bytes. As we didn't mentioned anything before the int, it takes as ```unsigned int a;``` which can store negative value also as value.
 
 2. ```scanf("%d",&n);``` scanf is the functio allows program to get input from standard in which is generally from keyboard. As developer specified ```%d``` it reads input as int and store in the location of n which specified as ```&n```.
 
@@ -113,6 +113,25 @@
     }
     printf(numbers[n]);
 ```
+
+<b>Explanation</b>
+
+1. ```int n;```  Declaring variable "n" and allocating memory as integer, which is specific to the compilers few compilers allocated 4 bytes and recent compilers allocating 8 bytes. As we didn't mentioned anything before the int, it takes as ```unsigned int a;``` which can store negative value also as value.
+
+2. ```scanf("%d",&n);``` scanf is the functio allows program to get input from standard in which is generally from keyboard. As developer specified ```%d``` it reads input as int and store in the location of n which specified as ```&n```.
+
+3. ```char numbers[10][15] = { "Greater than 9",  "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };``` Declaring variable "numbers" and allocating memory as char 2 dimentional array with space 10 * 15 = 150. Each character takes 1 byte of memory, so total 150 byte of memory. Keeping respective numbers to each and every memory location. Memory location 1 have "one", Memory location 2 have "two", Memory location 3 have "three", Memory location 4 have "four", Memory location 5 have "five", Memory location 6 have "six", Memory location 7 have "seven", Memory location 8 have "eight", Memory location 9 have "nine". Keeping "Greater than 9" in memory location as 0, so our logic will replace the n value as 0 if it's greater than 9, So it will help to print the value.
+
+4. ```if(n > 9){ n = 0; }``` Checking the value "n" is lesser than 9, when it returns true it will reassign the n value as 0.
+
+5. ```printf(numbers[n]);``` Memory location of "n" in numbers which will print the string representation of n from 1-9, other wise it will take "0" which prints "Greater than 9"
+
+<b>More points from Dhayal</b>
+
+1. Declaring "Greater than 9" in location of ```numbers``` as 0 is not a good idea, which will mislead the developers to assume wrong.
+2. Allocating additional memory for ```numbers``` variable
+2. Printing using index memory is good which will avoid loops and multiple conditions.
+
 ---
 
 ## 3) Solution3.c - Simple solution using if, else if, else and puts
@@ -134,6 +153,47 @@
     else if (n == 9)    puts("nine");
     else                puts("Greater than 9");
 ```
+
+<b>Explanation</b>
+
+1. ```int n;```  Declaring variable "n" and allocating memory as integer, which is specific to the compilers few compilers allocated 4 bytes and recent compilers allocating 8 bytes. As we didn't mentioned anything before the int, it takes as ```unsigned int a;``` which can store negative value also as value.
+
+2. ```scanf("%d",&n);``` scanf is the functio allows program to get input from standard in which is generally from keyboard. As developer specified ```%d``` it reads input as int and store in the location of n which specified as ```&n```.
+
+3. ```if (n == 1) puts("one");``` If is a conditional check statement, it knows only true(1) or false(0). Inside ``` n == 1 ``` is the condition, which returns true/false based on the value of n. When the value returns true it will go inside the execution. Here execution is ```puts("one");``` Which prints the output. When the condition is true, it will skip the upcoming "else if" and "else" statement. 
+
+4. ```else if (n == 2) puts("two");``` "else if" is the condition which comes after "if" or some other "else if". When the previous condition fails, then it will come to this statment. Works same like if statement. "else if" is the optional condition and can't declare without giving "if" condition.
+
+5. ```else puts("Greater than 9");``` "else" is the condition which comes after "if" or "else if". When all the previous condition fails then it will execute. "else" is optional condition and can't declate without giving "if" condition
+
+6. Program checks ```if (n == 1)```. When the given value is 1, then prints the output as "one" and skips else if and else conditions in execution.
+
+7. When point no. 6 fails then it will check ```else if (n == 2)```, When the given value is 2, then prints the output as "two" and skips else if and else conditions in execution.
+
+8. When point no. 7 fails then it will check ```else if (n == 3)```, When the given value is 3, then prints the output as "three" and skips else if and else conditions in execution.
+
+9. When point no. 8 fails then it will check ```else if (n == 4)```, When the given value is 4, then prints the output as "four" and skips else if and else conditions in execution.
+
+10. When point no. 9 fails then it will check ```else if (n == 5)```, When the given value is 5, then prints the output as "five" and skips else if and else conditions in execution.
+
+11. When point no. 10 fails then it will check ```else if (n == 6)```, When the given value is 6, then prints the output as "six" and skips else if and else conditions in execution.
+
+12. When point no. 11 fails then it will check ```else if (n == 7)```, When the given value is 7, then prints the output as "seven" and skips else if and else conditions in execution.
+
+13. When point no. 12 fails then it will check ```else if (n == 8)```, When the given value is 8, then prints the output as "eight" and skips else if and else conditions in execution.
+
+14. When point no. 13 fails then it will check ```else if (n == 9)```, When the given value is 9, then prints the output as "nine" and skips else if and else conditions in execution.
+
+15. When point no. 14 fails then it will execute ```else```, It will reach here when all the above conditions failed, then prints the output as "Greater than 9".
+
+<b>More points from Dhayal</b>
+
+1. Giving ``` { } ``` for ```if, else if, ```  and ```else``` is the good practice. It will make the developers and editor to understand better way. For single line statement we don't need to specifically mention ```{ }```. 
+
+2. When the given ```n``` is more than 9, then it is suppose to go inside the condition of ```if``` and 8 ```else if``` which takes "CPU" cost to execute the program. So this code is not very efficient in process wise.
+
+3. Having multiple ```puts``` statment will confuse the developers.
+
 ---
 
 ## 4) Solution4.c - Solution using array of string with puts
@@ -153,6 +213,25 @@
     }
     puts(numbers[n]);
 ```
+
+
+<b>Explanation</b>
+
+1. ```int n;```  Declaring variable "n" and allocating memory as integer, which is specific to the compilers few compilers allocated 4 bytes and recent compilers allocating 8 bytes. As we didn't mentioned anything before the int, it takes as ```unsigned int a;``` which can store negative value also as value.
+
+2. ```scanf("%d",&n);``` scanf is the functio allows program to get input from standard in which is generally from keyboard. As developer specified ```%d``` it reads input as int and store in the location of n which specified as ```&n```.
+
+3. ```char numbers[10][15] = { "Greater than 9",  "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };``` Declaring variable "numbers" and allocating memory as char 2 dimentional array with space 10 * 15 = 150. Each character takes 1 byte of memory, so total 150 byte of memory. Keeping respective numbers to each and every memory location. Memory location 1 have "one", Memory location 2 have "two", Memory location 3 have "three", Memory location 4 have "four", Memory location 5 have "five", Memory location 6 have "six", Memory location 7 have "seven", Memory location 8 have "eight", Memory location 9 have "nine". Keeping "Greater than 9" in memory location as 0, so our logic will replace the n value as 0 if it's greater than 9, So it will help to print the value.
+
+4. ```if(n > 9){ n = 0; }``` Checking the value "n" is lesser than 9, when it returns true it will reassign the n value as 0.
+
+5. ```puts(numbers[n]);``` Memory location of "n" in numbers which will print the string representation of n from 1-9, other wise it will take "0" which prints "Greater than 9"
+
+<b>More points from Dhayal</b>
+
+1. Declaring "Greater than 9" in location of ```numbers``` as 0 is not a good idea, which will mislead the developers to assume wrong.
+2. Allocating additional memory for ```numbers``` variable
+2. Printing using index memory is good which will avoid loops and multiple conditions.
 ---
 
 ## Solution5.c - Solution using switch case and printf
